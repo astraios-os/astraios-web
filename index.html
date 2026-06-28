@@ -197,8 +197,8 @@
       var user=['spencerdixon','dixon'].join('.');
       var domain=['gmail','com'].join('.');
       var addr=user+String.fromCharCode(64)+domain;
-      var subj=encodeURIComponent('Astra waitlist — new signup');
-      var body=encodeURIComponent('Please add me to the Astra build updates.\n\nMy email: '+visitor);
+      var subj=encodeURIComponent('Astraios Waitlist Signup');
+      var body=encodeURIComponent(visitor);
       window.location.href='mailto:'+addr+'?subject='+subj+'&body='+body;
       if(status) status.textContent='Opening your email app — hit send and you’re on the list.';
     });
