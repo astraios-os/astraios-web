@@ -61,6 +61,17 @@
   button:hover{transform:translateY(-1px); box-shadow:0 10px 30px rgba(255,176,90,.25)}
   .mono{font-family:ui-monospace,Menlo,monospace; color:var(--amber); font-size:.92em}
   .end-foot{margin-top:3rem; padding-top:1.6rem; border-top:1px solid rgba(124,140,200,.12); font-size:.8rem; opacity:.6}
+  .gallery{display:grid; grid-template-columns:1fr; gap:1.4rem; margin:1.9rem 0 .5rem}
+  @media(min-width:640px){.gallery{grid-template-columns:1fr 1fr}}
+  .shot{background:rgba(124,140,200,.05); border:1px solid rgba(124,140,200,.16); border-radius:14px; overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,.35)}
+  .shot img{width:100%; display:block; border-bottom:1px solid rgba(124,140,200,.12)}
+  .shot .cap{padding:.75rem .95rem; font-size:.86rem; color:var(--muted); line-height:1.5}
+  .shot .cap b{color:#e8ecff; font-weight:600}
+  .soon{display:inline-block; margin-left:.55rem; font-size:.6rem; letter-spacing:.22em; text-transform:uppercase; color:var(--amber);
+    border:1px solid rgba(255,176,90,.45); border-radius:20px; padding:3px 10px; vertical-align:middle}
+  figure.health{margin:2rem 0 0}
+  figure.health img{width:100%; border-radius:14px; border:1px solid rgba(124,140,200,.2); box-shadow:0 14px 46px rgba(0,0,0,.45)}
+  figure.health figcaption{color:var(--muted); font-size:.9rem; margin-top:.8rem; font-style:italic; text-align:center}
 </style>
 </head>
 <body>
@@ -137,6 +148,36 @@
       <li>And the first rule she was ever given, the hardest one to build: <span class="mono">never lie. ask, don't assume.</span></li>
     </ul>
     <p>That last one took the longest. Turns out making something honest is harder than making it clever.</p>
+  </section>
+
+  <section>
+    <h2><span class="small">She keeps a caring eye</span>The health monitor — what it does for me.</h2>
+    <p>I live with chronic pain, anxiety, and COPD. So the thing I most needed was never something clever — it was <em>someone paying attention</em> on the days I can't. Now something does, quietly, around the clock.</p>
+    <p>Every hour, from my Apple Watch, she takes in the numbers that matter for my lungs and heart:</p>
+    <ul>
+      <li><b>Blood oxygen (SpO₂)</b> — the one that matters most with COPD — with resting, average and max heart rate, and heart-rate variability.</li>
+      <li>Respiratory rate, steps and distance, exercise, active energy, sleep, and even wrist temperature.</li>
+      <li><b>Blood pressure</b> — my monitor emails a reading morning and evening; she logs it herself and plots it on the standard NHS scale.</li>
+      <li>And the things only I can tell her — <b>pain, anxiety, medication, exercise</b> — logged in a tap.</li>
+    </ul>
+    <p>She lays it out as a fortnight of trends, so a pattern I'd never catch on my own — a run of bad-pain days, oxygen drifting, sleep coming apart — is simply <em>there</em>. Something I can glance at, and something I can hand my GP.</p>
+    <div class="quote">And the one rule she will never break: she <em>records and shows</em> — she never diagnoses, never tells me a reading is "high," never plays doctor. Care, not a clipboard. The judgement stays with me and the people trained for it.</div>
+    <figure class="health">
+      <img src="shot-wellbeing.jpg" alt="Astra's Wellbeing board — SpO2, heart rate, blood pressure and pain/anxiety trends, all real readings, recorded not diagnosed" loading="lazy" onerror="this.style.display='none'" />
+      <figcaption>Her Wellbeing board — real readings, mine. Watch, blood pressure, and how I'm feeling, in one place. Recorded, never diagnosed.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2><span class="small">Coming soon</span>A first look at her.<span class="soon">not public yet</span></h2>
+    <p>A few of her boards — real, running, and honest. This is genuinely where she's at, today.</p>
+    <div class="gallery">
+      <div class="shot"><img src="shot-cockpit.jpg" alt="Astra's Cockpit" loading="lazy" onerror="this.parentNode.style.display='none'" /><div class="cap"><b>The Cockpit</b> — her face. Ask her anything; watch her think it through and cite her sources.</div></div>
+      <div class="shot"><img src="shot-news.jpg" alt="Astra's News board" loading="lazy" onerror="this.parentNode.style.display='none'" /><div class="cap"><b>The News board</b> — the world's stories, mapped to where they're actually happening.</div></div>
+      <div class="shot"><img src="shot-media.jpg" alt="Astra's Media board" loading="lazy" onerror="this.parentNode.style.display='none'" /><div class="cap"><b>Media</b> — clips on the things I actually care about, because she knows what those are.</div></div>
+      <div class="shot"><img src="shot-places.jpg" alt="Astra's Places globe" loading="lazy" onerror="this.parentNode.style.display='none'" /><div class="cap"><b>Places</b> — a live, keyless 3D globe you can <b>search, pan and zoom</b>. Say "show me anywhere" and she flies you there. (Here: a stretch of Kent — where she was built.)</div></div>
+      <div class="shot"><img src="shot-system.jpg" alt="Astra's System board" loading="lazy" onerror="this.parentNode.style.display='none'" /><div class="cap"><b>System</b> — what's running under the hood, shown plainly. No smoke, no mirrors.</div></div>
+    </div>
   </section>
 
   <section>
