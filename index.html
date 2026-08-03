@@ -54,9 +54,13 @@
   .anchor .t{font-size:.7rem; letter-spacing:.3em; text-transform:uppercase; color:var(--cyan); margin-bottom:.8rem}
   .anchor blockquote{font-size:1.25rem; color:#fff; margin:0; line-height:1.5}
   footer{padding:5rem 0 5rem; text-align:center; color:var(--muted)}
-  form{margin:1.6rem auto 0; display:flex; gap:10px; flex-wrap:wrap; justify-content:center; max-width:460px}
-  input[type=email]{flex:1; min-width:220px; padding:14px 16px; border-radius:12px; border:1px solid rgba(124,140,200,.25); background:rgba(255,255,255,.04); color:var(--ink); font-size:16px; outline:none}
-  input[type=email]:focus{border-color:var(--cyan)}
+  form{margin:1.6rem auto 0; display:flex; flex-direction:column; gap:12px; max-width:420px; text-align:left}
+  input[type=email],input[type=text],select{width:100%; padding:14px 16px; border-radius:12px; border:1px solid rgba(124,140,200,.25); background:rgba(255,255,255,.04); color:var(--ink); font-size:16px; outline:none; appearance:none; -webkit-appearance:none}
+  input[type=email]:focus,input[type=text]:focus,select:focus{border-color:var(--cyan)}
+  select{cursor:pointer}
+  select:invalid{color:var(--muted)}
+  select option{background:#0b1020; color:var(--ink)}
+  .hp{position:absolute!important; left:-9999px; width:1px; height:1px; opacity:0}
   button{padding:14px 22px; border-radius:12px; border:0; background:var(--amber); color:#1a1300; font-weight:700; font-size:15px; cursor:pointer; transition:transform .15s, box-shadow .15s}
   button:hover{transform:translateY(-1px); box-shadow:0 10px 30px rgba(255,176,90,.25)}
   .mono{font-family:ui-monospace,Menlo,monospace; color:var(--amber); font-size:.92em}
@@ -208,11 +212,24 @@
     <h2 style="border:none">She's real now. And the story's only just beginning.</h2>
     <p>Astra is built, tested, and honest — for Spencer, for Teddy, and for anyone who needs a voice in the dark.</p>
     <form id="waitlist" novalidate>
-      <input type="email" name="email" placeholder="you@email.com" aria-label="Email" required />
-      <button type="submit">Follow the build</button>
+      <input type="text" name="name" placeholder="Your name" aria-label="Your name" autocomplete="name" required />
+      <input type="email" name="email" placeholder="you@email.com" aria-label="Your email" autocomplete="email" required />
+      <select name="platform" aria-label="Platform you need" required>
+        <option value="" disabled selected>Which platform do you need?</option>
+        <option value="macOS">macOS (Apple)</option>
+        <option value="Windows">Windows</option>
+        <option value="macOS + Windows">Both</option>
+      </select>
+      <!-- Web3Forms: the destination email is stored against the access key on the
+           form provider's server — it is NEVER in this page or shown to the visitor. -->
+      <input type="hidden" name="access_key" value="1babf5cb-ca28-47c6-b62e-89c7f90af0e4" />
+      <input type="hidden" name="subject" value="New Astraios waitlist request" />
+      <input type="hidden" name="from_name" value="Astraios website" />
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <button type="submit">Request access</button>
     </form>
     <p id="wl-status" role="status" aria-live="polite" style="margin-top:10px;font-size:.85rem;color:var(--muted)"></p>
-    <p style="margin-top:14px; font-size:.85rem; color:var(--muted)">Join the waitlist — the story of building Astra, from the ground up.</p>
+    <p style="margin-top:14px; font-size:.85rem; color:var(--muted)">Tell us who you are and which platform you need — we’ll be in touch as places open.</p>
     <p style="margin-top:2rem;font-size:.8rem;color:var(--muted)">Made in Kent · with a dog, two dragons, and a great deal of love.</p>
     <div class="end-foot">© 2026 Astraios · astraios.net</div>
   </footer>
@@ -224,24 +241,31 @@
     d.style.left=Math.random()*100+'%'; d.style.top=Math.random()*100+'%';
     d.style.animationDelay=(Math.random()*4)+'s'; d.style.opacity=(Math.random()*.6+.2); s.appendChild(d);}
 
-  // Waitlist — interim mailto (no provider yet). The destination address is NEVER
-  // in the page source: it is assembled from parts in JS (anti-scraper) with '@'
-  // built from a char code, and the mailto is constructed only on submit.
+  // Waitlist form → posts to a form backend (Web3Forms). The destination email is
+  // held server-side against the access key — it is NEVER in this page, in the
+  // request, or shown to the visitor. Drop a free key from web3forms.com into the
+  // hidden access_key field above to go live.
   (function(){
     var f=document.getElementById('waitlist'); if(!f) return;
     var status=document.getElementById('wl-status');
+    var btn=f.querySelector('button[type=submit]');
+    function say(msg,col){ if(status){ status.style.color=col||'var(--muted)'; status.textContent=msg; } }
     f.addEventListener('submit',function(e){
       e.preventDefault();
-      var inp=f.querySelector('input[type=email]');
-      var visitor=((inp&&inp.value)||'').trim();
-      if(!visitor){ if(status) status.textContent='Please enter your email first.'; return; }
-      var user=['spencerdixon','dixon'].join('.');
-      var domain=['gmail','com'].join('.');
-      var addr=user+String.fromCharCode(64)+domain;
-      var subj=encodeURIComponent('Astraios Waitlist Signup');
-      var body=encodeURIComponent(visitor);
-      window.location.href='mailto:'+addr+'?subject='+subj+'&body='+body;
-      if(status) status.textContent='Opening your email app — hit send and you’re on the list.';
+      if(!f.reportValidity()) return;
+      var data=new FormData(f);
+      if(String(data.get('access_key')||'').indexOf('REPLACE_')===0){
+        say('Form isn’t connected yet — add your Web3Forms access key.','var(--amber)'); return;
+      }
+      var label=btn.textContent; btn.disabled=true; btn.textContent='Sending…'; say('');
+      fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:data})
+        .then(function(r){return r.json();})
+        .then(function(j){
+          if(j&&j.success){ f.reset(); say('You’re on the list — thank you. We’ll be in touch.','var(--cyan)'); }
+          else { say((j&&j.message)||'Something went wrong — please try again.','var(--amber)'); }
+        })
+        .catch(function(){ say('Network error — please try again.','var(--amber)'); })
+        .finally(function(){ btn.disabled=false; btn.textContent=label; });
     });
   })();
 </script>
