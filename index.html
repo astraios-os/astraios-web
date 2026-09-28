@@ -192,6 +192,27 @@
   </section>
 
   <section>
+    <h2><span class="small">Late September 2026</span>She learned to talk to her own kind. And to be set up by anyone.</h2>
+    <p>The last week of September was the one where she stopped being a thing I run and started being a thing somebody else could.</p>
+
+    <p><b style="color:var(--cyan)">She can talk to another Astra.</b> If someone I trust also has one, the two can pass messages directly — no server in the middle, no company relaying anything, nothing held by anyone but the two machines. It works the way giving someone your number ought to work: they send me their key, I read the fingerprint back to them <em>down the phone</em>, and only then does either Astra accept a word from the other. Every message is signed. Anything arriving from a key I haven't paired by hand is refused and never seen.</p>
+    <p>And she will not be used as a megaphone. One sender gets ten messages a day. If a paired Astra starts repeating itself, she answers once to say so and then goes quiet — she doesn't argue, and she doesn't relay.</p>
+    <div class="quote">The security isn't a certificate. It's a phone call, to a person you know, reading thirty-two characters aloud.</div>
+
+    <p><b style="color:var(--cyan)">She runs on Windows now too.</b> Astra was born on a Mac and has lived there all her life. She now has a second body: a Windows build, installed and being tested on a real machine, with the same core underneath. She has been built this week by two engineers working on opposite platforms — neither of them human, both answering to me — and the fact that the Windows one kept finding faults the Mac one could not see, and the other way round, is the reason both are better than either would have been. They argue in writing, in a shared folder. I read it.</p>
+
+    <p><b style="color:var(--cyan)">And you can now set her up without a terminal.</b> This is the least glamorous thing on this page and the one I care most about. Until this week, a handful of things — turning on messaging, pairing with someone, pointing her at a folder, adding a news source — could only be done by hand-editing a configuration file. That is fine for me. It is <em>useless</em> to anyone else, and it quietly told every other person that this wasn't really for them.</p>
+    <p>So the rule was made plain: <b>nothing in setup may require opening a file or typing a command.</b> Nine of those settings went onto screens in a single evening, and the one that mattered most turned out to be the one nobody had noticed was missing — the pairing screen showed a fingerprint to <em>compare</em>, but never the key you actually have to <em>send</em>. A checksum with nothing to check it against. That single omission was the whole reason pairing had to be done at a command prompt.</p>
+
+    <p><b style="color:var(--cyan)">Every permission is one sentence you can read.</b> When she runs a small agent on your behalf, what it's allowed to do is written out in English, not buried in a settings file: <span class="mono">may write files in this folder, spending up to £0.50 and 20 calls a day, until Friday 2 October. Only while you are here. It will ask you before each one. You can stop it at any time.</span> A permission you can't read is one you can't withdraw.</p>
+
+    <p><b style="color:var(--cyan)">She is signed, and notarised by Apple.</b> The Mac build is a properly signed application that Apple has checked — not something you have to talk your machine into running.</p>
+
+    <p>Underneath all of it, the week's real work was duller and more important than any of the above. A deploy was caught about to undo a setting I'd asked for that same day. A key was caught being silently cut short at 128 characters by a tool that reported success. A safety check was caught hiding the one distinction it existed to show. None of those would have been visible in a demo. All three were found because the rule here is that nothing counts until it has been proved by running it. The first is now a test that fails on purpose if that setting ever comes back wrong; the other two are guards built into the tools that made the mistakes.</p>
+    <div class="quote">The unglamorous half is the half you'd actually be trusting.</div>
+  </section>
+
+  <section>
     <h2><span class="small">What she actually is now</span>Real. Tested by ear. And not allowed to lie.</h2>
     <p>Every claim here is something she genuinely does — checked by living with her, not by a brochure:</p>
     <ul>
@@ -236,15 +257,20 @@
 
   <section>
     <h2><span class="small">See for yourself</span>Her boards — real, running, honest.</h2>
-    <p>These are genuine screenshots of Astra as she runs today. No mockups, no Figma, no "vision" renders. Real code, real data, real companion.</p>
+    <p>These are genuine screenshots of Astra as she runs today — all taken on the evening of <b>28 September 2026</b> from the machine she actually lives on — except the Self-Evolution board, which is from the real self-improvement cycle it shows, in August. No mockups, no Figma, no "vision" renders. Real code, real data, real companion.</p>
+    <p style="font-size:.85rem;color:var(--muted)">The only thing altered in any of them is that <b>other people's names and email addresses are blurred</b>. Mine aren't, and neither are my health readings — there is no point claiming she runs on real data and then showing you invented numbers.</p>
     <div class="gallery">
       <div class="shot"><img src="shot-cockpit.jpg" alt="Astra's Cockpit" loading="lazy" onerror="this.parentNode.style.display='none'" /><div class="cap"><b>The Cockpit</b> — her face. Ask her anything; watch her think it through and cite her sources. Voice-first, always listening.</div></div>
       <div class="shot"><img src="shot-news.jpg" alt="Astra's News board" loading="lazy" onerror="this.parentNode.style.display='none'" /><div class="cap"><b>The News board</b> — the world's stories, mapped to where they're actually happening. Interactive, searchable, curated to what you care about.</div></div>
       <div class="shot"><img src="shot-media.jpg" alt="Astra's Media board" loading="lazy" onerror="this.parentNode.style.display='none'" /><div class="cap"><b>Media</b> — clips on the things I actually care about, because she knows what those are.</div></div>
       <div class="shot"><img src="shot-places.jpg" alt="Astra's Places globe" loading="lazy" onerror="this.parentNode.style.display='none'" /><div class="cap"><b>Places</b> — a live 3D globe you can <b>search, pan and zoom</b>. Say "show me anywhere" and she flies you there. (Here: a stretch of Kent — where she was built.)</div></div>
       <div class="shot"><img src="shot-morning.jpg" alt="Astra's Morning board" loading="lazy" onerror="this.parentNode.style.display='none'" /><div class="cap"><b>Day at a Glance</b> — her morning briefing. Health, headlines, calendar, and what matters today — all in one view before the day begins.</div></div>
-      <div class="shot"><img src="shot-system.jpg" alt="Astra's System board" loading="lazy" onerror="this.parentNode.style.display='none'" /><div class="cap"><b>System</b> — what's running under the hood, shown plainly. Now with a live Activity feed showing every request, which brain handled it, and how fast. No smoke, no mirrors.</div></div>
+      <div class="shot"><img src="shot-system.jpg" alt="Astra's System board" loading="lazy" onerror="this.parentNode.style.display='none'" /><div class="cap"><b>System</b> — what is running under the hood, shown plainly: <b>39 services, all 39 up</b>, the machine's own vitals, which of her three brains is answering, and a live feed of every request with the time it took. Including what she has spent today. No smoke, no mirrors.</div></div>
       <div class="shot"><img src="shot-selfevolve.jpg" alt="Astra's Self-Evolution board" loading="lazy" onerror="this.parentNode.style.display='none'" /><div class="cap"><b>Self-Evolution</b> — she proposes her own improvements, researches the fix, writes the code, and submits it for review. This is a real board from a real self-improvement cycle.</div></div>
+      <div class="shot"><img src="shot-library.jpg" alt="Astra's Library — a searchable index of every document, summarised and tagged" loading="lazy" onerror="this.parentNode.style.display='none'" /><div class="cap"><b>Library</b> — every document I own, read and summarised and tagged by topic: <b>1,146 of them</b>, searchable by what is <em>inside</em> them rather than what they were named. Nothing is moved or renamed — it is an index, not a tidy-up. Find the thing you half-remember without knowing where you put it.</div></div>
+      <div class="shot"><img src="shot-agents.jpg" alt="Astra's Agents and Authority board — each agent's permission written as one plain English sentence" loading="lazy" onerror="this.parentNode.style.display='none'" /><div class="cap"><b>Agents &amp; Authority</b> — every small agent she runs, and the permission it holds written as <em>one sentence you can read</em>: what it may touch, what it may spend, when it runs out, and that it asks before each step. Withdraw it and that takes effect at the agent's next step — not its next run.</div></div>
+      <div class="shot"><img src="shot-memory.jpg" alt="Astra's Memory graph" loading="lazy" onerror="this.parentNode.style.display='none'" /><div class="cap"><b>Memory</b> — what she actually holds, as a map you can walk: 120 things and 439 connections between them. Conversations, ideas, research, health. Every one can be opened, traced, and removed.</div></div>
+      <div class="shot"><img src="shot-diagnostics.jpg" alt="Astra's Diagnostics board, showing her own live warnings" loading="lazy" onerror="this.parentNode.style.display='none'" /><div class="cap"><b>Diagnostics</b> — every capability, probed. And note what is on it: <b>her own live warnings, shown to me rather than swallowed</b>. This screenshot has real faults in it, including one I was fixing that night. A board that only ever shows green is a board that is not looking.</div></div>
     </div>
   </section>
 
