@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What Astra can do — Astra by Astraios</title>
+<meta name="description" content="Every capability Astra really has, what each one needs before it works, and what you lose by turning it off." />
+<style>
+  :root{
+    --bg:#05060c; --ink:#e8ecff; --muted:#9aa3c7;
+    --amber:#ffb05a; --cyan:#6fd6ff; --star:#cdd6ff;
+    --line:rgba(232,236,255,.10);
+    --max:min(80vw, 1900px);
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:radial-gradient(1200px 700px at 50% -10%, #131a33 0%, var(--bg) 60%);
+    color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,system-ui,sans-serif;
+    line-height:1.75; overflow-x:hidden;}
+  .wrap{position:relative; z-index:1; max-width:var(--max); margin:0 auto; padding:3rem 24px 5rem}
+  a{color:var(--cyan); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .back{display:inline-block; margin-bottom:2rem; font-size:.85rem; color:var(--cyan); letter-spacing:.15em; text-transform:uppercase}
+  h1{font-size:clamp(1.8rem,5vw,2.8rem); font-weight:600; letter-spacing:-.02em; color:#fff; margin:0 0 .5rem}
+  .lede{color:var(--muted); max-width:66ch; margin:0 0 1.4rem}
+  .counts{display:flex; flex-wrap:wrap; gap:10px; margin:0 0 .5rem; padding:0; list-style:none}
+  .counts li{border:1px solid var(--line); border-radius:999px; padding:5px 14px; font-size:.8rem; color:var(--muted)}
+  .counts b{color:var(--ink); font-weight:600}
+  h2{font-size:.78rem; letter-spacing:.18em; text-transform:uppercase; color:var(--amber); margin:3rem 0 1rem; font-weight:600}
+  .grid{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+  .card{background:rgba(232,236,255,.03); border:1px solid var(--line); border-radius:14px; padding:20px; display:flex; flex-direction:column}
+  .card h3{margin:0 0 .4rem; font-size:1.05rem; font-weight:600; color:#fff; letter-spacing:-.01em; line-height:1.3}
+  .card p{margin:0; color:var(--star); font-size:.95rem; line-height:1.6}
+  .meta{margin:1rem 0 0; padding:1rem 0 0; border-top:1px solid var(--line); display:grid; gap:8px; margin-top:auto}
+  .row{display:flex; gap:10px; font-size:.8rem; color:var(--muted); line-height:1.5}
+  .row span:first-child{color:var(--cyan); flex:0 0 92px; letter-spacing:.08em; text-transform:uppercase; font-size:.65rem; padding-top:.25rem}
+  .needs{color:var(--amber)}
+  footer{margin-top:4rem; border-top:1px solid var(--line); padding-top:1.5rem; color:var(--muted); font-size:.85rem}
+  footer p{max-width:72ch}
+  .end-foot{margin-top:2rem; font-size:.75rem; line-height:1.6}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="/">← Astraios</a>
+<h1>What Astra can do</h1>
+<p class="lede">Every capability below is built and running today. Where one needs a key, an account or a switch turning on before it can work, it says so — and where it is off until you ask for it, it says that too.</p>
+<ul class="counts"><li><b>35</b> capabilities</li><li><b>17</b> screens</li><li>nothing leaves without your say-so</li></ul>
+<h2>Talking and remembering</h2>
+<div class="grid">
+<article class="card">
+<h3>Voice</h3>
+<p>Listen and speak with you.</p>
+<div class="meta">
+<div class="row"><span>Without it</span><span>She cannot hear you or answer out loud.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Brain</h3>
+<p>Reason and answer questions, using a brain on your own network where it can and a stronger one when a task needs it.</p>
+<div class="meta">
+<div class="row"><span>Needs</span><span class="needs">an API key, or a brain of your own on your network</span></div>
+<div class="row"><span>On screen</span><span>System</span></div>
+<div class="row"><span>Without it</span><span>She stops being able to think: no answers, no judgement, nothing classified.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Memory</h3>
+<p>Remember and recall past conversations and facts.</p>
+<div class="meta">
+<div class="row"><span>On screen</span><span>Memory</span></div>
+<div class="row"><span>Without it</span><span>She forgets everything the moment it has been said.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Memory Graph</h3>
+<p>Connect what you tell me into an associative memory graph.</p>
+<div class="meta">
+<div class="row"><span>On screen</span><span>Memory</span></div>
+<div class="row"><span>Without it</span><span>Facts stop being linked together, so recall becomes literal.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Threads</h3>
+<p>Keep track of ongoing topics and follow them up.</p>
+<div class="meta">
+<div class="row"><span>Without it</span><span>She stops following a topic across days — each conversation starts cold.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Scratchpad</h3>
+<p>Jot and recall working notes.</p>
+<div class="meta">
+<div class="row"><span>On screen</span><span>Scratchpad</span></div>
+<div class="row"><span>Without it</span><span>Her notepad goes, and with it anything she has written down for you.</span></div>
+</div>
+</article>
+</div>
+<h2>Your day</h2>
+<div class="grid">
+<article class="card">
+<h3>Calendar</h3>
+<p>Read your schedule and create events.</p>
+<div class="meta">
+<div class="row"><span>Needs</span><span class="needs">a Google or Microsoft calendar</span></div>
+<div class="row"><span>On screen</span><span>Calendar</span></div>
+<div class="row"><span>Without it</span><span>No diary, no meeting warnings, and nothing spots appointments buried in emails.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Tasks</h3>
+<p>Track your to-dos and remind you at a time you set.</p>
+<div class="meta">
+<div class="row"><span>On screen</span><span>Work</span></div>
+<div class="row"><span>Without it</span><span>No task list and no reminders from it.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Email</h3>
+<p>Read, summarise, draft and send email, grouped by the folders you already file into.</p>
+<div class="meta">
+<div class="row"><span>Needs</span><span class="needs">a Gmail or Outlook account</span></div>
+<div class="row"><span>On screen</span><span>Work</span></div>
+<div class="row"><span>Without it</span><span>No reading, sorting or drafting of email, and nothing is surfaced as urgent.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Her own mailbox</h3>
+<p>Take mail at my own address, answer what I can, and raise what needs you.</p>
+<div class="meta">
+<div class="row"><span>Needs</span><span class="needs">an address of her own and an app password</span></div>
+<div class="row"><span>On screen</span><span>Work</span></div>
+<div class="row"><span>Without it</span><span>She stops raising things for your attention off her own back.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Money</h3>
+<p>Keep bills owed out and invoices owed in, with a due date, a reminder, and a tick when it is dealt with.</p>
+<div class="meta">
+<div class="row"><span>Needs</span><span class="needs">switched on in settings</span></div>
+<div class="row"><span>On screen</span><span>Work</span></div>
+<div class="row"><span>Without it</span><span>Bills and invoices stop being tracked and nothing reminds you a due date is coming.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Weather</h3>
+<p>Tell you the current weather.</p>
+<div class="meta">
+<div class="row"><span>On screen</span><span>Day at a Glance</span></div>
+<div class="row"><span>Without it</span><span>No weather, and it drops out of the morning briefing.</span></div>
+</div>
+</article>
+</div>
+<h2>Finding things out</h2>
+<div class="grid">
+<article class="card">
+<h3>Web search</h3>
+<p>Search the web for current information.</p>
+<div class="meta">
+<div class="row"><span>Needs</span><span class="needs">a search API key</span></div>
+<div class="row"><span>Without it</span><span>She can no longer look anything up. Answers come only from what she already knows.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>News</h3>
+<p>Fetch world news and headlines.</p>
+<div class="meta">
+<div class="row"><span>On screen</span><span>News</span></div>
+<div class="row"><span>Without it</span><span>The News board goes.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Media</h3>
+<p>Bring the latest from the channels and topics you follow.</p>
+<div class="meta">
+<div class="row"><span>On screen</span><span>Media</span></div>
+<div class="row"><span>Without it</span><span>The Media board goes — no clips from your topics or channels.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Library</h3>
+<p>Catalogue your files so you can find them by what they are, without moving anything.</p>
+<div class="meta">
+<div class="row"><span>Needs</span><span class="needs">a folder to index</span></div>
+<div class="row"><span>On screen</span><span>Library</span></div>
+<div class="row"><span>Without it</span><span>The Library board goes — your files stop being catalogued and searchable.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Documents</h3>
+<p>Write, amend, read, compare and summarise documents in your vault — keeping each one's own file type, on your own templates, and emailing one as a real attachment.</p>
+<div class="meta">
+<div class="row"><span>On screen</span><span>Work</span></div>
+<div class="row"><span>Without it</span><span>She stops writing documents and filing them to the vault.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Astronomy</h3>
+<p>Tell you what is worth looking at tonight from where you are, and the stars to line your telescope up on.</p>
+<div class="meta">
+<div class="row"><span>On screen</span><span>Astronomy</span></div>
+<div class="row"><span>Without it</span><span>The Astronomy board goes, and nothing works out what the sky is doing.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Work catalogue</h3>
+<p>Search a work document catalogue.</p>
+<div class="meta">
+<div class="row"><span>Needs</span><span class="needs">a site address and your organisation's consent</span></div>
+<div class="row"><span>Without it</span><span>Work documents stop being searchable.</span></div>
+</div>
+</article>
+</div>
+<h2>Health and wellbeing</h2>
+<div class="grid">
+<article class="card">
+<h3>Health</h3>
+<p>Log and trend your pain, anxiety, medication and exercise (gently, not clinically).</p>
+<div class="meta">
+<div class="row"><span>Needs</span><span class="needs">switched on in settings</span></div>
+<div class="row"><span>On screen</span><span>Wellbeing</span></div>
+<div class="row"><span>Without it</span><span>No pain or anxiety logging, no Watch data, no trends, and the Wellbeing board goes. Medication reminders are separate and stay.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Medication</h3>
+<p>Remind you about medication and log when it's taken.</p>
+<div class="meta">
+<div class="row"><span>Needs</span><span class="needs">switched on in settings</span></div>
+<div class="row"><span>On screen</span><span>Wellbeing</span></div>
+<div class="row"><span>Without it</span><span>No medication reminders at all.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Care Mode</h3>
+<p>Notice when pain and anxiety are both bad, and change how I behave rather than carry on as normal.</p>
+<div class="meta">
+<div class="row"><span>On screen</span><span>Wellbeing</span></div>
+<div class="row"><span>Without it</span><span>She stops changing how she behaves when pain and anxiety are both severe.</span></div>
+</div>
+</article>
+</div>
+<h2>Your home and your desk</h2>
+<div class="grid">
+<article class="card">
+<h3>Your home</h3>
+<p>Control your home devices, and notice motion and the doorbell.</p>
+<div class="meta">
+<div class="row"><span>Needs</span><span class="needs">a HomeKit bridge</span></div>
+<div class="row"><span>On screen</span><span>Home</span></div>
+<div class="row"><span>Without it</span><span>No control of your home, and motion and doorbell events stop arriving.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Your desk</h3>
+<p>Open, focus and close applications, and open a web address.</p>
+<div class="meta">
+<div class="row"><span>Without it</span><span>She can no longer open, focus or close applications, or open a web address.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Sight</h3>
+<p>See through the camera — identify what you hold up, and know whether you are at the desk.</p>
+<div class="meta">
+<div class="row"><span>Needs</span><span class="needs">a camera</span></div>
+<div class="row"><span>Without it</span><span>She stops knowing whether you are at the desk, and stops recognising you. She will talk to an empty room.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Integrations</h3>
+<p>Connect other apps and services, reading unattended and asking you before anything is changed.</p>
+<div class="meta">
+<div class="row"><span>Needs</span><span class="needs">a connector switched on</span></div>
+<div class="row"><span>Without it</span><span>Connected apps and services go; only what is built in remains.</span></div>
+</div>
+</article>
+</div>
+<h2>Working on your behalf</h2>
+<div class="grid">
+<article class="card">
+<h3>Agents</h3>
+<p>Design an automation agent, show you exactly what it would do, and run it only once you have approved it.</p>
+<div class="meta">
+<div class="row"><span>On screen</span><span>Agents &amp; Authority</span></div>
+<div class="row"><span>Without it</span><span>No agents are designed or run, and the Agents board goes.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Self-evolution</h3>
+<p>Research, design and draft my own improvements for your approval.</p>
+<div class="meta">
+<div class="row"><span>On screen</span><span>Self-Evolution</span></div>
+<div class="row"><span>Without it</span><span>The Self-Evolution board goes; she stops proposing her own improvements.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Meetings</h3>
+<p>Take meeting notes.</p>
+<div class="meta">
+<div class="row"><span>Without it</span><span>No meeting notes, no summaries, no action items — and she no longer falls silent during one.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Overnight work</h3>
+<p>Do overnight work and brief you in the morning.</p>
+<div class="meta">
+<div class="row"><span>Without it</span><span>NOTHING enforces silence overnight. Reminders and nudges can wake you.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Another Astra</h3>
+<p>Pass things between me and another Astra you have paired with.</p>
+<div class="meta">
+<div class="row"><span>Needs</span><span class="needs">a second Astra, paired with this one</span></div>
+<div class="row"><span>On screen</span><span>Communication</span></div>
+<div class="row"><span>Without it</span><span>She stops talking to any other Astra, and the Communication board goes.</span></div>
+</div>
+</article>
+</div>
+<h2>Trust and safety</h2>
+<div class="grid">
+<article class="card">
+<h3>Permission</h3>
+<p>Ask before anything goes outside this house, and refuse rather than guess what you meant.</p>
+<div class="meta">
+<div class="row"><span>On screen</span><span>Agents &amp; Authority</span></div>
+<div class="row"><span>Without it</span><span>Outward actions stop being gated, which is the one thing that should never be switched off.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Guardrails</h3>
+<p>Enforce the guardrails written after each past mistake, so the same fault cannot come back.</p>
+<div class="meta">
+<div class="row"><span>Without it</span><span>The guardrails from past incidents stop being enforced.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>The record</h3>
+<p>Keep an honest record of what I did and what it cost.</p>
+<div class="meta">
+<div class="row"><span>Without it</span><span>Her own record of what she did and what it cost stops being kept.</span></div>
+</div>
+</article>
+<article class="card">
+<h3>Self-check</h3>
+<p>Self-check every capability's readiness.</p>
+<div class="meta">
+<div class="row"><span>On screen</span><span>Diagnostics</span></div>
+<div class="row"><span>Without it</span><span>No readiness board and no overnight self-check. Faults stop being reported.</span></div>
+</div>
+</article>
+</div>
+<footer>
+<p>This page is generated from the same list Astra answers from when you ask her what she can do, so it cannot describe a capability she does not have. Anything still being built is left off it rather than written in the future tense.</p>
+<p style="margin-top:1rem"><a href="/">Back to astraios.net</a></p>
+<div class="end-foot">
+<p>© 2026 Astraios · astraios.net</p>
+<p style="margin-top:.4rem"><a href="terms.html">Terms of Use</a> · <a href="privacy.html">Privacy Policy</a></p>
+<p style="margin-top:.6rem">Astra is not a medical device and does not provide medical advice. Health monitoring features are for personal wellness information only.<br/>Always consult a qualified healthcare professional for medical decisions. In a medical emergency, call 999.</p>
+</div>
+</footer>
+</div>
+</body>
+</html>
