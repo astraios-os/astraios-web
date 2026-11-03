@@ -1,0 +1,7 @@
+# ⛔ WORKING FILES, NOT SITE CONTENT. Vercel serves this repository's root, so anything
+# committed here is PUBLISHED at astraios.net. Both of these were swept in by a careless
+# `git add -A` on 3 November 2026 and removed in the next commit: a vendor API guide and an
+# old waitlist page. Neither held a secret — checked before anything else — but neither is
+# a page anyone should be able to fetch.
+astra health api info.md
+index_waitlist_backup.html
